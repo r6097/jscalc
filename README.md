@@ -1,0 +1,1 @@
+Goal: Create an onscreen calculator using Javascript, HTML, and CSS
