@@ -3,43 +3,44 @@ html{
 }
 #frame{
     background-color: slateblue;
-    width: 200px;
-    height: 350px;
+    width: 250px;
+    height: 450px;
     margin-top: 4vw;
     margin-left: 2vw;
-    border-radius: 2%;
+    border-radius: 7px;
     position: fixed;
 }
 #screen{
+    display:flex;
     background-color: lightgreen;
-    grid-column-start: 1;
-    grid-column-end: 5;
-    grid-row-start: 1;
-    grid-row-end: 2;
-    width: 160px;
-    height: 40px;
+    width: 200px;
+    height: 80px;
     margin-top: 15px;
-    margin-left: auto;
+    margin-left: 25px;
     margin-bottom: 5px;
-    position: relative;
+    border-radius: 5px;
 }
 #grid{
     display: grid;
-    grid-gap: 5px;
+    padding-top: 10px;
+    grid-gap: 15px;
     grid-template-columns: repeat(4, 40px);
     position: relative;
 }
 button{
     border-radius: 10%;
     background-color: royalblue;
-    width: 30px;
-    height: 30px;
-    font-size: 12px;
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
     text-align: center;
+    margin-left: 16px;
     color: springgreen;
 }
 #clear{
     padding-left: 3px;
+    grid-column-start: 1;
+    grid-column-end: 5;
     background-color: red;
     color: white;
 }
