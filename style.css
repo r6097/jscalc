@@ -1,46 +1,54 @@
 html{
-    background-color: darkslateblue;
+    background-color: rgb(128, 133, 127);
 }
 #frame{
-    background-color: slateblue;
     width: 250px;
     height: 450px;
-    margin-top: 4vw;
-    margin-left: 2vw;
     border-radius: 7px;
     position: fixed;
 }
 #screen{
-    display:flex;
-    background-color: lightgreen;
+    background-color: rgb(175, 175, 175);
     width: 200px;
     height: 80px;
     margin-top: 15px;
-    margin-left: 25px;
+    margin-left: 1.5vw;
     margin-bottom: 5px;
     border-radius: 5px;
 }
-#grid{
+#textbox{
+    font-family: monospace;
+    font-size: large;
+    padding-left: 1em;
+}
+.wrapper{
     display: grid;
+    grid-template-columns: repeat(3, 1fr);
     padding-top: 10px;
     grid-gap: 15px;
-    grid-template-columns: repeat(4, 40px);
     position: relative;
 }
 button{
     border-radius: 10%;
-    background-color: royalblue;
+    background-color: rgb(31, 74, 109);
     width: 50px;
     height: 50px;
     font-size: 20px;
     text-align: center;
     margin-left: 16px;
-    color: springgreen;
+    color: rgb(180, 226, 235);
 }
 #clear{
     padding-left: 3px;
-    grid-column-start: 1;
-    grid-column-end: 5;
+    background-color: goldenrod;
+    color: white;
+}
+#delete{
+    padding-left: 3px;
     background-color: red;
+    color: white;
+}
+#equal{
+    background-color: cornflowerblue;
     color: white;
 }
