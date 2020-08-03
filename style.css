@@ -1,54 +1,88 @@
-html{
-    background-color: rgb(128, 133, 127);
-}
-#frame{
-    width: 250px;
-    height: 450px;
-    border-radius: 7px;
-    position: fixed;
-}
-#screen{
-    background-color: rgb(175, 175, 175);
-    width: 200px;
-    height: 80px;
-    margin-top: 15px;
-    margin-left: 1.5vw;
-    margin-bottom: 5px;
-    border-radius: 5px;
-}
-#textbox{
+html {
     font-family: monospace;
-    font-size: large;
-    padding-left: 1em;
 }
-.wrapper{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    padding-top: 10px;
-    grid-gap: 15px;
-    position: relative;
+body{
+    padding: 0;
+    margin: 0;
+    background-color: grey;
 }
-button{
-    border-radius: 10%;
-    background-color: rgb(31, 74, 109);
-    width: 50px;
-    height: 50px;
-    font-size: 20px;
-    text-align: center;
-    margin-left: 16px;
-    color: rgb(180, 226, 235);
+
+.frame{
+    display:grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 100px);
 }
-#clear{
-    padding-left: 3px;
-    background-color: goldenrod;
-    color: white;
+
+.frame > button{
+    outline: none;
+    font-family: monospace;
+    border-radius: 1em;
+    box-shadow: 5px 5px #535353;
+    font-size: 2rem;
+    margin: 5px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(79, 119, 146);
 }
-#delete{
-    padding-left: 3px;
-    background-color: red;
-    color: white;
+.frame > button:hover{
+    cursor: pointer;
+    background-color: rgb(148, 189, 206);
 }
-#equal{
-    background-color: cornflowerblue;
-    color: white;
+
+.clear{
+    background-color: rgb(226, 45, 84) !important;
+}
+.clear:hover{
+    background-color: rgb(228, 114, 123) !important;
+}
+
+.delete{
+    background-color: rgb(160, 3, 3) !important;
+}
+.delete:hover{
+    background-color: rgb(167, 52, 52) !important;
+}
+
+.operator{
+    background-color: rgb(177, 112, 59) !important;
+}
+.operator:hover{
+    background-color: rgb(194, 135, 58) !important;
+}
+
+.equals{
+    background-color: rgb(68, 84, 228) !important;
+}
+.equals:hover{
+    background-color: rgb(149, 159, 250) !important;
+}
+
+
+.span-two {
+    grid-column: span 2;
+}
+
+.output {
+    grid-column: 1 / -1;
+    border: 5px solid rgba(77, 77, 77, 0.1);
+    border-radius: 5px;
+    background-color: rgb(214, 214, 214);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+    user-select: none;
+}
+
+.output .previous-op {
+    color: rgba(56, 38, 88, 0.6);
+}
+.output .current-op {
+    color: rgb(56, 38, 88);
+    font-size: 2.5rem;
 }
